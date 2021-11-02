@@ -17,12 +17,12 @@ import imaplib
 
 serialCommuncation = serial.Serial('COM7')
 
-sourceEmail = 'iotsingidunumstudent@gmail.com'
-destinationEmail = 'iotsingidunumstudent@gmail.com'
+sourceEmail = '***@***.com'
+destinationEmail = '***@***.com'
 
-CHANEL_ID = '1546154'
-API_KEY_WRITE = 'UZ3RLQT01FILW3C4'
-API_KEY_READ = '5448636BX3U2R7RM'
+CHANEL_ID = '****'
+API_KEY_WRITE = ''****''
+API_KEY_READ = ''****''
 
 BASE_URL = 'https://api.thingspeak.com'
 
@@ -371,7 +371,7 @@ def sendReport():
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    r = server.login(sourceEmail, 'iot2018230140')
+    r = server.login(sourceEmail, ''****'')
     r = server.sendmail(sourceEmail, destinationEmail, message.as_string())
     server.quit()
 
@@ -458,7 +458,7 @@ while True:
 #serialCommuncation = serial.Serial(PORT, BAUD_RATE)
 
 email = imaplib.IMAP4_SSL('imap.gmail.com')
-email.login('iotsingidunumstudent@gmail.com', 'iot2018230140')
+email.login(''****'@'****'.com', ''****'')
 
 
 receivingThread  = Thread(target=recieve, args=(serialCommuncation, ))
